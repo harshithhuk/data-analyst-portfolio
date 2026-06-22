@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Customer Analytics Dashboard</title>
+    <title>UK Job Market Analysis Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {
@@ -24,7 +24,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 40px 20px;
             border-radius: 12px;
@@ -54,7 +54,7 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid #11998e;
+            border-left: 4px solid #667eea;
         }
 
         .kpi-label {
@@ -97,7 +97,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             margin-bottom: 30px;
-            border-left: 4px solid #11998e;
+            border-left: 4px solid #667eea;
         }
 
         .insights-title {
@@ -123,7 +123,7 @@
         }
 
         .footer a {
-            color: #11998e;
+            color: #667eea;
             text-decoration: none;
         }
 
@@ -136,117 +136,106 @@
 <body>
     <div class="container">
         <header>
-            <h1>💼 E-commerce Customer Analytics Dashboard</h1>
-            <p>RFM Segmentation & Cohort Analysis on 10,000+ Transactions</p>
+            <h1>📊 UK Job Market Analysis Dashboard</h1>
+            <p>Analyzing 5,000+ Data Analyst, Data Scientist & ML Engineer roles</p>
         </header>
 
         <div class="kpi-grid">
             <div class="kpi-card">
-                <div class="kpi-label">Total Transactions</div>
-                <div class="kpi-value">10,000+</div>
-            </div>
-            <div class="kpi-card">
-                <div class="kpi-label">Total Customers</div>
+                <div class="kpi-label">Total Jobs Analyzed</div>
                 <div class="kpi-value">5,000+</div>
             </div>
             <div class="kpi-card">
-                <div class="kpi-label">Avg Customer Value</div>
-                <div class="kpi-value">£450</div>
+                <div class="kpi-label">Average Salary</div>
+                <div class="kpi-value">£42K</div>
             </div>
             <div class="kpi-card">
-                <div class="kpi-label">Month-2 Retention</div>
-                <div class="kpi-value">35%</div>
+                <div class="kpi-label">Most Common Role</div>
+                <div class="kpi-value">Data Analyst (45%)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Top Location</div>
+                <div class="kpi-value">London (+20% premium)</div>
             </div>
         </div>
 
         <div class="charts-grid">
             <div class="chart-card">
-                <h3 class="chart-title">RFM Customer Segments</h3>
-                <canvas id="rfmChart"></canvas>
+                <h3 class="chart-title">Salary by Role (£)</h3>
+                <canvas id="salaryChart"></canvas>
             </div>
             <div class="chart-card">
-                <h3 class="chart-title">Revenue by Segment (%)</h3>
-                <canvas id="revenueChart"></canvas>
+                <h3 class="chart-title">Job Distribution (%)</h3>
+                <canvas id="distributionChart"></canvas>
             </div>
             <div class="chart-card">
-                <h3 class="chart-title">Customer Lifetime Value (£)</h3>
-                <canvas id="clvChart"></canvas>
+                <h3 class="chart-title">Top 10 Skills (%)</h3>
+                <canvas id="skillsChart"></canvas>
             </div>
             <div class="chart-card">
-                <h3 class="chart-title">Cohort Retention (%)</h3>
-                <canvas id="retentionChart"></canvas>
+                <h3 class="chart-title">Salary by Experience (£)</h3>
+                <canvas id="experienceChart"></canvas>
             </div>
         </div>
 
         <div class="insights-card">
-            <h3 class="insights-title">🎯 Key Findings</h3>
+            <h3 class="insights-title">🎯 Key Insights</h3>
             <ul class="insights-list">
-                <li>✓ Top 15% customers (VIP) generate 65% of revenue (Pareto Principle)</li>
-                <li>✓ 4 distinct RFM segments identified with different CLV & retention</li>
-                <li>✓ Month-2 retention drops to 35% (critical re-engagement window)</li>
-                <li>✓ Dormant segment: 85% churn risk = £500K recovery opportunity</li>
-                <li>✓ VIP retention rate: 85% (vs 25% for low-value customers)</li>
-                <li>✓ Repeat customers: 3x higher CLV than one-time purchasers</li>
-            </ul>
-        </div>
-
-        <div class="insights-card">
-            <h3 class="insights-title">📊 Customer Segments Breakdown</h3>
-            <ul class="insights-list">
-                <li><strong>VIP (3%):</strong> £2,500+ CLV | 85% retention | 20+ purchases | Personalized retention strategy</li>
-                <li><strong>High-Value (9%):</strong> £1,000-£2,500 CLV | 65% retention | 8-15 purchases | Loyalty rewards</li>
-                <li><strong>Regular (24%):</strong> £300-£1,000 CLV | 45% retention | 3-7 purchases | Engagement campaigns</li>
-                <li><strong>Low-Value (64%):</strong> £50-£300 CLV | 25% retention | 1-2 purchases | Reactivation offers</li>
+                <li>✓ Data Analyst salary range: £25K–£50K (most common role)</li>
+                <li>✓ Top skills: Python (78%), SQL (72%), Power BI (45%), Tableau (38%)</li>
+                <li>✓ London premium: +20% vs regional averages</li>
+                <li>✓ Remote roles: 25% of market, growing</li>
+                <li>✓ Experience impact: Entry (£22K-£30K) → Senior (£50K-£70K+)</li>
+                <li>✓ AWS & Azure: High-demand emerging skills (+£5-10K premium)</li>
             </ul>
         </div>
 
         <div class="footer">
-            <p>Built for e-commerce analytics | Data source: 10,000+ transactions</p>
+            <p>Built for data analyst job search | Data source: UK Job Market 2026</p>
             <p><a href="../../">← Back to Portfolio</a></p>
         </div>
     </div>
 
     <script>
-        new Chart(document.getElementById('rfmChart'), {
+        new Chart(document.getElementById('salaryChart'), {
             type: 'bar',
             data: {
-                labels: ['VIP', 'High-Value', 'Regular', 'Low-Value'],
-                datasets: [{ label: 'Customers (count)', data: [150, 450, 1200, 3200], backgroundColor: '#11998e', borderRadius: 8 }]
+                labels: ['Data Analyst', 'Data Scientist', 'ML Engineer'],
+                datasets: [{ label: 'Average Salary', data: [38000, 48000, 52000], backgroundColor: '#667eea', borderRadius: 8 }]
             },
-            options: { responsive: true, plugins: { legend: { display: false } } }
+            options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { ticks: { callback: v => '£' + (v/1000) + 'K' } } } }
         });
 
-        new Chart(document.getElementById('revenueChart'), {
+        new Chart(document.getElementById('distributionChart'), {
             type: 'doughnut',
             data: {
-                labels: ['VIP (3%)', 'High-Value (15%)', 'Regular (20%)', 'Low-Value (62%)'],
-                datasets: [{ data: [3, 15, 20, 62], backgroundColor: ['#11998e', '#38ef7d', '#56ccf2', '#a8edea'] }]
+                labels: ['Data Analyst (45%)', 'Data Scientist (35%)', 'ML Engineer (20%)'],
+                datasets: [{ data: [45, 35, 20], backgroundColor: ['#667eea', '#764ba2', '#f093fb'] }]
             },
             options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
         });
 
-        new Chart(document.getElementById('clvChart'), {
-            type: 'bar',
+        new Chart(document.getElementById('skillsChart'), {
+            type: 'barH',
             data: {
-                labels: ['VIP', 'High-Value', 'Regular', 'Low-Value'],
-                datasets: [{ label: 'Avg CLV (£)', data: [2500, 1500, 650, 180], backgroundColor: ['#11998e', '#38ef7d', '#56ccf2', '#a8edea'], borderRadius: 8 }]
+                labels: ['Python', 'SQL', 'Excel', 'Stats', 'Pandas', 'Power BI', 'ML', 'AWS', 'Tableau', 'Azure'],
+                datasets: [{ label: '% of jobs', data: [78, 72, 65, 52, 42, 45, 38, 35, 38, 28], backgroundColor: '#667eea', borderRadius: 8 }]
             },
-            options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { ticks: { callback: v => '£' + v } } } }
+            options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } }, scales: { x: { max: 100 } } }
         });
 
-        new Chart(document.getElementById('retentionChart'), {
-            type: 'line',
+        new Chart(document.getElementById('experienceChart'), {
+            type: 'bar',
             data: {
-                labels: ['Month 1', 'Month 2', 'Month 3', 'Month 6', 'Month 12'],
+                labels: ['Entry (0-1yr)', 'Junior (1-3yr)', 'Mid (3-5yr)', 'Senior (5+yr)'],
                 datasets: [
-                    { label: 'VIP', data: [100, 85, 75, 60, 45], borderColor: '#11998e', tension: 0.4, borderWidth: 2 },
-                    { label: 'High-Value', data: [100, 65, 50, 30, 15], borderColor: '#38ef7d', tension: 0.4, borderWidth: 2 },
-                    { label: 'Regular', data: [100, 45, 30, 15, 5], borderColor: '#56ccf2', tension: 0.4, borderWidth: 2 },
-                    { label: 'Low-Value', data: [100, 25, 12, 4, 1], borderColor: '#a8edea', tension: 0.4, borderWidth: 2 }
+                    { label: 'Min', data: [22000, 30000, 40000, 50000], backgroundColor: '#667eea' },
+                    { label: 'Max', data: [30000, 45000, 55000, 70000], backgroundColor: '#764ba2' }
                 ]
             },
-            options: { responsive: true, scales: { y: { max: 100, ticks: { callback: v => v + '%' } } } }
+            options: { responsive: true, scales: { y: { ticks: { callback: v => '£' + (v/1000) + 'K' } } } }
         });
     </script>
 </body>
 </html>
+
